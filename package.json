@@ -1,0 +1,19 @@
+{
+  "name": "ts-event-bus-http-client-channel",
+  "version": "0.0.1",
+  "description": "HTTP Client channel for ts-event-bus",
+  "main": "dist/index.js",
+  "author": "l.guychard@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^2.7.2"
+  },
+  "scripts": {
+
+  },
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "axios": "^0.18.0",
+    "ts-event-bus": "file:../../ts-event-bus"
+  }
+}
