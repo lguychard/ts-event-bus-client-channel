@@ -8,7 +8,7 @@ export default class HTTPClientChannel extends GenericChannel {
         axios.get('/handshake')
             .then(response => {
                 this._connected()
-                response.data.forEach(msg => this._messageReceived(msg))
+                response.data.forEach((msg: TransportMessage) => this._messageReceived(msg))
             })
             .catch(error => {
                 throw new Error(`Could not setup HTTPClientChanel: ${error}`)
@@ -22,7 +22,7 @@ export default class HTTPClientChannel extends GenericChannel {
             case 'response':
                 this._error(`Cannot send ${message.type} from client`)
             case 'request':
-                axios.post('/message')
+                axios.post('/message', message)
                     .then(response => this._messageReceived(response.data))
                     .catch(error => this._error(error))
         }

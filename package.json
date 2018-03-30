@@ -5,11 +5,12 @@
   "main": "dist/index.js",
   "author": "l.guychard@gmail.com",
   "license": "MIT",
+  "typings": "dist/index.d.ts",
   "devDependencies": {
     "typescript": "^2.7.2"
   },
   "scripts": {
-
+    "build": "tsc"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
